@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    	<meta name="description" content="My name is Nicole Cote. I have an interest in Web Development. Please check out my portfolio and resume.">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  		
+  		<title>Along Came Nicole</title>
+
+
+  		<link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+  		<link rel="stylesheet" type="text/css" href="css/style.css">
+ 
+	</head>
+
+	<body>
+
+		
+
+		<header>
+			<div class="nav">
+				<div class="nav-wrapper">
+					<a href="http://www.alongcamenicole.com"><img src="images/icon.png" alt="Home"/></a>
+					<button class="menu-btn">&#9776;</button>
+					<div class="nav-display">
+						<ul>
+					  		<li><a class="active" href="#home">Home</a></li>
+					  		<li><a href="#about">About</a></li>
+					  		<li><a href="#portfolio">Portfolio</a></li>
+					  		<li><a href="#resume">Resum&eacute;</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		
+		<!-- Intro Banner start	-->
+
+		<section id="home" class="banner">
+			<div class="container">
+				<h1 class="title">Nicole Cote</h1>
+				<p>I love to code, play video games, read books, play the piano, ski &amp; snowboard, and many other things...
+					<br>
+					<br>
+					I'm always looking to learn something new.
+				</p>
+			</div>
+		</section>
+
+		<!-- Intro Banner end -->
+
+		<!-- About start -->
+
+		<section id="about">
+			<div class="container">
+				<h2>who am I?</h2>
+
+					<img class="image" src="images/profile.png" alt="Profile picture"/>
+					<!-- <img class="right" src="images/chat_bubble2.png" alt="Welcome!"/> -->
+
+					<p> Welcome to my website. My name is Nicole Cote. I received a BS degree in Computer Science from the University of Massachusetts Boston. My passion is coding, and being able to learn new things along the way to expand my knowledge.
+					<br>
+					<br>
+					Learning something new can be very rewarding for myself and I would like to be able to display this for others to see. Please visit my <a href="https://github.com/NicoleCote">Github page</a> to see various projects I have worked on for fun, as well as my Portfolio section to see my web dev projects. One of my goals is to find a job where I can provide users a fun experience through my work.
+					</p>
+			</div>
+		</section>
+
+		<!-- About end -->
+
+		<!-- Portfolio begin -->
+
+		<section id="portfolio">
+			<div class="container">
+				<h2>portfolio</h2>
+				<p>
+					Welcome to my Portfolio section. <br>
+					Here is a list of websites I have worked on so far.
+				</p>
+				<ol>
+					<li>
+						<a href="http://www.chungsasiancuisine.com">Chung's Asian Cuisine</a>&nbsp;: A family owned Chinese restaraunt located in Braintree, MA.
+					</li>
+					<li>
+						<a href="http://argus.cs.umb.edu/wps/onlineclient/">KDLab Research Project</a>&nbsp;: Developed a web client that renders image maps of user submitted images using KML to highlight buildings in the image.
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- Portfolio end -->
+
+		<!-- Resume start -->
+			
+		<section id="resume">
+				<div class="container">
+					<p class="center">
+						<button type="submit" onClick="window.open('nc_resume.pdf')">
+							Resum&eacute;
+						</button>
+					</p>
+					<img src="images/resume.jpg">
+				</div>
+		</section>
+
+		<!-- Resume end -->
+			
+		<footer>
+			<div class="container">
+				Copyright &copy; 2015 Nicole Cote
+				<a href="#"><img src="images/button.png" alt="Top"/></a>
+			</div>
+		</footer>
+		
+		<!-- Add any Javascript or jQuery files here -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  		<script type="text/javascript" src="js/smooth.scrolling.js"></script>
+		
+		<!-- This helps with the display of the menu on both mobile/tablet devices depending on the orientation of the screen as it resizes -->
+		<script type="text/javascript">
+		    $(document).ready(function() {
+			if($(window).width() < 1024) {
+          			$(".nav-display").hide();
+          			$(".menu-btn").click(function () {
+            				$(".nav-display").slideToggle("slow");
+          			});
+        		} else {
+
+          			var resizeTimer;
+          			$(window).on('resize', function(e) {
+            				clearTimeout(resizeTimer);
+            				resizeTimer = setTimeout(function () {
+              					if($(this).width() < 1024) {
+                					$(".nav-display").hide();
+                					$(".menu-btn").click(function () {
+                  						$(".nav-display").slideToggle("slow");
+                					});
+              					} else $(".nav-display").show(); 
+            				}, 250);
+          			});
+        		}
+        	    });	
+		</script>
+
+
+	</body>
+
+</html>
